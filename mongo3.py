@@ -45,22 +45,18 @@ def xl_1():
         
     else:
         pass
-    #print(data)
-    #header=["Date","BatchName","Step Description","TICR-01","TICR-02"]
-    #data = csv.to_dict(orient = 'data')
-    #client=MongoClient('localhost',27017)
-    #db=client['excel2-db']
-    #col=db.col
+    print(data)
+    header=["Date","BatchName","Step Description","TICR-01","TICR-02"]
+    data = csv.to_dict(orient = 'data')
+    client=MongoClient('localhost',27017)
+    db=client['excel2-db']
+    col=db.col
     #inserting data into mongodb and removing the file using os module
-    #col.insert(data)
-    #print("done1")
-    #os.remove("Archive.csv")
+    col.insert(data)
+    print("done1")
+    os.remove("Archive.csv")
     #print("file removed")
-    
-
-
-xl_1()
-"""def xl_2():
+def xl_2():
     path1=pd.ExcelFile("Alarm.xls")#Reading excel file using pandas module
     s1=path1.sheet_names
     #print(s)
@@ -104,4 +100,4 @@ def xl_3():
 
 xl_1()
 xl_2()
-xl_3()"""
+xl_3()
