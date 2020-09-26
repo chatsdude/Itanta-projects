@@ -25,7 +25,7 @@ def write_csv():
     cursor = coll.find ({},{'roll no':x, 'marks':y})
     cursor=list(cursor)
     print(cursor)
-    """fields=['roll no','marks']
+    fields=['roll no','marks']
     with open('database1.csv', 'w',newline='') as outfile:
         csv_output=csv.writer(outfile,delimiter="|")
         csv_output.writerow(fields)
@@ -64,7 +64,7 @@ schedule.every(1).hour.do(mail_csv)
 
 while 1:
     schedule.run_pending()
-    time.sleep(1)"""
+    time.sleep(1)
 write_csv()       
 
 
